@@ -17,7 +17,8 @@ public abstract class ClasePadre_Abstracta {
     public void Operaciones(){
         int bandera = 0;
         int seleccion =0;
-        do{
+        try {
+          do{
             do{
                 System.out.println("Por favor seleccione una opcion:");
                 System.out.println("      1. Consulta de saldo.");
@@ -50,8 +51,12 @@ public abstract class ClasePadre_Abstracta {
                 System.out.println("----------------------------");
                 bandera=2;
             }
-        }while(bandera !=2 );
-    
+        }while(bandera !=2 );  
+        } catch (Exception e) {
+            System.out.println("Error !!!!!!!!!!!!! "  +e);
+        }finally{
+            System.out.println("REALIZO SU TRACCION CON EXITO");        }
+          
     }
     
     public void Retiro(){
